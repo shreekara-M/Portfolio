@@ -11,6 +11,7 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "framer-motion": "^12.24.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -22,8 +23,8 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.8",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "vite": "^5.0.8"
   },
   "description": "A modern, responsive portfolio website showcasing my skills, projects, and experience as an aspiring DevOps and Software Engineer.",
   "main": "vite.config.js",

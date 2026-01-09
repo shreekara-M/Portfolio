@@ -1,73 +1,51 @@
+import { motion } from 'framer-motion';
+
 export default function Certifications() {
+  const certifications = [
+    {
+      year: "2024",
+      title: "Front End Development",
+      provider: "Great Learning Academy"
+    },
+    {
+      year: "2024",
+      title: "Artificial Intelligence",
+      provider: "Great Learning"
+    },
+    {
+      year: "2024",
+      title: "Mastering AI Tools",
+      provider: "Be10x"
+    }
+  ];
+
   return (
-    <section className="certifications" id="certifications">
-      <h2>Certifications & Achievements</h2>
-      
-      <div className="certifications-grid">
-        <div className="cert-item">
-          <div className="cert-header">
-            <h3>Front End Development</h3>
-            <span className="cert-date">2025</span>
-          </div>
-          <p className="cert-provider">Great Learning Academy</p>
-          <div className="cert-details">
-            <p><strong>Skills Gained:</strong> HTML5, CSS3, JavaScript, React, Responsive Design</p>
-            <p><strong>Duration:</strong> 3 months</p>
-            <p><strong>Status:</strong> Completed with distinction</p>
-          </div>
-        </div>
+    <section id="certifications">
+      <motion.h2
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+      >
+        Certifications
+      </motion.h2>
 
-        <div className="cert-item">
-          <div className="cert-header">
-            <h3>Artificial Intelligence</h3>
-            <span className="cert-date">2025</span>
-          </div>
-          <p className="cert-provider">Great Learning</p>
-          <div className="cert-details">
-            <p><strong>Skills Gained:</strong> Machine Learning, Deep Learning, Neural Networks, Python for AI</p>
-            <p><strong>Duration:</strong> 4 months</p>
-            <p><strong>Status:</strong> Completed with distinction</p>
-          </div>
-        </div>
-
-        <div className="cert-item">
-          <div className="cert-header">
-            <h3>Mastering AI Tools</h3>
-            <span className="cert-date">2025</span>
-          </div>
-          <p className="cert-provider">Be10x</p>
-          <div className="cert-details">
-            <p><strong>Skills Gained:</strong> ChatGPT, AI Automation, Prompt Engineering, AI Tools Integration</p>
-            <p><strong>Duration:</strong> 1 month</p>
-            <p><strong>Status:</strong> Completed with distinction</p>
-          </div>
-        </div>
-
-        <div className="cert-item">
-          <div className="cert-header">
-            <h3>SQL Fundamentals</h3>
-            <span className="cert-date">2025</span>
-          </div>
-          <p className="cert-provider">Microdegree</p>
-          <div className="cert-details">
-            <p><strong>Skills Gained:</strong> Database Design, Query Optimization, Data Analysis, SQL Server</p>
-            <p><strong>Duration:</strong> 1 month</p>
-            <p><strong>Status:</strong> Completed with distinction</p>
-          </div>
-        </div>
-
-        <div className="cert-item">
-          <div className="cert-header">
-            <h3>Python Programming</h3>
-            <span className="cert-date">2025</span>
-          </div>
-          <p className="cert-provider">Microdegree</p>
-          <div className="cert-details">
-            <p><strong>Skills Gained:</strong> Python Syntax, Data Structures, OOP, Libraries, Automation</p>
-            <p><strong>Duration:</strong> 2 months</p>
-            <p><strong>Status:</strong> Completed with distinction</p>
-          </div>
-        </div>
+      <div className="grid-cols-3">
+        {certifications.map((cert, index) => (
+          <motion.div
+            key={index}
+            className="glass-card"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            style={{ textAlign: 'center' }}
+          >
+            <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🏆</div>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', minHeight: '3rem' }}>{cert.title}</h3>
+            <p style={{ color: 'var(--accent-primary)', fontFamily: 'var(--font-mono)' }}>{cert.provider}</p>
+            <span style={{ display: 'block', marginTop: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{cert.year}</span>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

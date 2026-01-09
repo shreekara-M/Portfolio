@@ -1,86 +1,69 @@
+import { motion } from 'framer-motion';
+
 export default function Projects() {
+  const projects = [
+    {
+      title: "Mail_Verse",
+      desc: "A smart email client designed to streamline job hunting. It filters emails based on keywords like 'hiring' or 'job offer', allowing users to efficiently check recruitment mails from various companies, making the email surfing process smooth and focused.",
+      tags: ["React", "Email API", "Keyword Filtering"]
+    },
+    {
+      title: "Remote-Controlled Ploughing Machine",
+      desc: "An automated agricultural robot designed to perform soil tillage and farming tasks with minimal human intervention. Integrates Arduino Uno via Bluetooth/IoT.",
+      tags: ["Arduino", "IoT", "C++", "Robotics"]
+    },
+    {
+      title: "SERENITY RETREAT",
+      desc: "A premium hotel booking website offering tranquil and luxurious stays. Features include easy online booking and extensive browsing of modern amenities.",
+      tags: ["React", "Web Design", "UI/UX", "CSS3"]
+    }
+  ];
+
   return (
-    <section className="projects" id="projects">
-      <h2>Projects</h2>
-      
-      <div className="project-item">
-        <h3>Smart IoT-Enabled Ploughing Machine</h3>
-        <p>
-          <strong>Technology Stack:</strong> Arduino Uno, ESP32, Bluetooth Low Energy, MQTT, IoT sensors, C++<br/>
-          <strong>Duration:</strong> 3 months<br/>
-          <strong>Role:</strong> Lead IoT Developer & Hardware Integration Specialist
-        </p>
-        <p>
-          Developed an advanced IoT-enabled remote-controlled plowing machine that combines 
-          traditional farming with modern smart technology. The system features real-time 
-          soil analysis, automated depth control, and cloud-based monitoring capabilities. 
-          This project showcases expertise in embedded systems, sensor integration, and 
-          IoT communication protocols.
-        </p>
-        <p>
-          <strong>Key Features:</strong> Real-time soil condition monitoring, automated 
-          depth control, Bluetooth/WiFi connectivity, MQTT data transmission, cloud dashboard, 
-          predictive maintenance alerts
-        </p>
-      </div>
+    <section id="projects">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        Selected Work
+      </motion.h2>
 
-      <div className="project-item">
-        <h3>SERENITY RETREAT - Hotel Booking Platform</h3>
-        <p>
-          <strong>Technology Stack:</strong> HTML5, CSS3, JavaScript, Responsive Design<br/>
-          <strong>Duration:</strong> 2 months<br/>
-          <strong>Role:</strong> Full-Stack Developer
-        </p>
-        <p>
-          A comprehensive hotel booking platform where users can browse, book, and
-          manage luxury accommodations. Features include real-time availability updates, 
-          secure payment processing, and an intuitive user interface designed for 
-          optimal user experience across all devices.
-        </p>
-        <p>
-          <strong>Key Features:</strong> Responsive design, real-time booking system, 
-          user authentication, payment integration, admin dashboard
-        </p>
-      </div>
+      <div className="grid-cols-2">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="glass-card"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ y: -10, boxShadow: '0 20px 40px -20px rgba(56, 189, 248, 0.3)' }}
+          >
+            <div style={{ marginBottom: '1rem', color: 'var(--accent-primary)', fontSize: '2rem' }}>
+              📂
+            </div>
 
-      <div className="project-item">
-        <h3>Smart Home IoT Ecosystem</h3>
-        <p>
-          <strong>Technology Stack:</strong> ESP32, Raspberry Pi, MQTT, Node.js, React, Python, TensorFlow<br/>
-          <strong>Duration:</strong> 2 months<br/>
-          <strong>Role:</strong> Full-Stack IoT Developer
-        </p>
-        <p>
-          Created a comprehensive smart home system integrating multiple IoT devices with 
-          AI-powered automation. The system includes smart sensors, automated lighting, 
-          temperature control, and security monitoring with machine learning-based 
-          behavioral analysis and predictive maintenance.
-        </p>
-        <p>
-          <strong>Key Features:</strong> Multi-sensor integration, AI-powered automation, 
-          real-time monitoring dashboard, predictive analytics, energy optimization, 
-          voice control integration
-        </p>
-      </div>
+            <h3 style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>{project.title}</h3>
 
-      <div className="project-item">
-        <h3>AI-Powered IoT Learning Assistant</h3>
-        <p>
-          <strong>Technology Stack:</strong> Python, TensorFlow, IoT sensors, Edge Computing, Natural Language Processing<br/>
-          <strong>Duration:</strong> 1 month<br/>
-          <strong>Role:</strong> AI & IoT Integration Specialist
-        </p>
-        <p>
-          Developed an intelligent learning assistant that combines IoT sensors with AI 
-          to create personalized study environments. The system monitors student behavior 
-          through IoT sensors and uses machine learning to optimize learning conditions 
-          and provide adaptive educational content.
-        </p>
-        <p>
-          <strong>Key Features:</strong> IoT-based behavior monitoring, AI-driven 
-          personalization, edge computing processing, adaptive learning algorithms, 
-          real-time feedback system
-        </p>
+            <p style={{ marginBottom: '1.5rem', fontSize: '0.95rem', lineHeight: '1.6' }}>{project.desc}</p>
+
+            <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
+              {project.tags.map((tag, idx) => (
+                <span key={idx} style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.8rem',
+                  color: 'var(--accent-primary)',
+                  background: 'rgba(56, 189, 248, 0.1)',
+                  padding: '4px 8px',
+                  borderRadius: '4px'
+                }}>
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
