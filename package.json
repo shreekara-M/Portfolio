@@ -2,10 +2,11 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://shreekara-M.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/portfolio/",
+    "build": "vite build --base=/Portfolio/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist"
