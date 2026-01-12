@@ -5,8 +5,8 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
 ## 🚀 Features
 
 - **Modern Design**: Clean, professional layout with gradient backgrounds and smooth animations
-- **Responsive**: Fully responsive design that works on all devices
-- **Interactive**: Hover effects and smooth transitions throughout
+- **Responsive**: Fully responsive design that works on all devices (Mobile Optimized)
+- **Interactive**: Hover effects, smooth transitions, and Floating Action Button (WhatsApp)
 - **Comprehensive**: Complete sections for About, Education, Skills, Projects, Certifications, and Contact
 - **Professional**: Showcases technical skills, projects, and achievements
 

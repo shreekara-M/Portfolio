@@ -10,6 +10,9 @@ import Skills from './Skils';
 import Projects from './projects';
 import Certifications from './Certifications';
 import Contact from './contacts';
+import SnowBackground from './SnowBackground';
+import TwinklingLights from './TwinklingLights';
+import WhatsAppButton from './WhatsAppButton';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -21,6 +24,9 @@ function App() {
 
   return (
     <>
+      <SnowBackground />
+      <TwinklingLights />
+      <WhatsAppButton />
       <motion.div
         className="progress-bar"
         style={{

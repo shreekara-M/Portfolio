@@ -16,6 +16,21 @@ export default function Certifications() {
       year: "2024",
       title: "Mastering AI Tools",
       provider: "Be10x"
+    },
+    {
+      year: "2025",
+      title: "Python",
+      provider: "Microdegree"
+    },
+    {
+      year: "2025",
+      title: "SQL",
+      provider: "Microdegree"
+    },
+    {
+      year: "2026",
+      title: "Master in Software Engineering",
+      provider: "IICT"
     }
   ];
 

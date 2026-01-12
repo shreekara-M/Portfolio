@@ -53,18 +53,10 @@ export default function Hero() {
 
         {/* Main Title */}
         <motion.h1
+          className="hero-title"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
-          style={{
-            fontSize: '6rem',
-            lineHeight: '1',
-            marginBottom: '1.5rem',
-            background: 'linear-gradient(to right, #fff, #94a3b8)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            textShadow: '0 0 30px rgba(255,255,255,0.1)'
-          }}
         >
           I Build Digital Experiences.
         </motion.h1>

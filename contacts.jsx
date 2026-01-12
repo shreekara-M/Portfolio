@@ -34,7 +34,11 @@ export default function Contact() {
               <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
             </svg>
           </a>
-          <a href="tel:+917022153161" className="nav-link">+91 70221 53161</a>
+          <a href="tel:+917022153161" className="nav-link" aria-label="Phone">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.49-5.15-3.8-6.62-6.62l1.97-1.57c.23-.23.33-.55.24-1.01a14.08 14.08 0 0 0-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3.3 3 3.93 3 4.71c0 9.37 7.63 17 17 17 .78 0 1.41-.65 1.41-1.19V16.37c0-.54-.45-.99-.99-.99z" />
+            </svg>
+          </a>
         </div>
       </motion.div>
     </section>
