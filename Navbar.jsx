@@ -16,6 +16,23 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    setIsOpen(false);
+
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <motion.nav
       className="navbar"
@@ -58,7 +75,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className="mobile-nav-link"
-                onClick={toggleMenu}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
               </a>

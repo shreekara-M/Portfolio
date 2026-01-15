@@ -30,7 +30,7 @@ export default function Hero() {
           className="hero-image-wrapper"
         >
           <img
-            src="/profile_final.jpg"
+            src="./profile_final.jpg"
             alt="Shreekara M"
             className="hero-img"
           />

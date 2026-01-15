@@ -26,7 +26,7 @@ export default function About() {
         <div className="about-img-container" style={{ position: 'relative', width: 'fit-content', margin: '0 auto' }}>
           <div style={{ position: 'relative', width: '100%', maxWidth: '300px' }}>
             <img
-              src="/WhatsApp Image 2025-10-18 at 19.04.04_9f8931b0.jpg"
+              src="./WhatsApp Image 2025-10-18 at 19.04.04_9f8931b0.jpg"
               alt="Shreekara M"
               style={{
                 width: '100%',
